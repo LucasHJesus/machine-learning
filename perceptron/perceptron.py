@@ -16,7 +16,7 @@ class perceptron:
         self.maxEpoch = 100
         pass
 
-    def train(self, dataset:list, target:int) -> bool:
+    def training(self, dataset:list, target:int) -> bool:
         dataset = self.__linearize__(dataset)
         data = np.array(dataset)
         for i in range(self.maxEpoch):
