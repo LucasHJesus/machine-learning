@@ -1,4 +1,3 @@
-enumerate
 
 dataset1:list = [
     [
@@ -17,4 +16,4 @@ dataset1:list = [
     ]
 ] 
 
-dataset_1_Target:list = [-1,1]
+dataset_1_Target:list = ["T","X","?"]
