@@ -55,7 +55,6 @@ class adaline:
 
                 self.weights[bias_column] = self.__update_weight__(old = self.weights[bias_column], target = training_set.iat[i,target_column], x_in = 1,y_in=y_in)
                 errors.append(self.__error__(target = training_set.iat[i,target_column] , y_in = y_in))
-                #print(f"target: {training_set.iat[i,target_column]}\ty_in: {y_in}\terror: {self.__error__(target = training_set.iat[i,target_column] , y_in = y_in)}")
                 
             epoch+=1
             error = sum(errors)
@@ -88,7 +87,7 @@ class adaline:
             graphs.dispersion(test_set,self.weights)
 
 
-neuronio = adaline(max_epoch = 10000, learnin_rate = 0.001,max_error = 2)
+neuronio = adaline(max_epoch = 3000, learnin_rate = 0.001, max_error = 2)
 neuronio.training("Basedados_B2.xlsx")
 neuronio.test_all("Basedados_B2.xlsx")
 
